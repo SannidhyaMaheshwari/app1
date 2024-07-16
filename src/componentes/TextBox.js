@@ -12,7 +12,7 @@ export default function TextBox(props) {
         //setWrd(text.split(" ").length)
         //setChr(text.length)
         console.log(event.target.value.split(" ").length , event.target.value.length , event.target.value)
-        console.log(text.split(" ").length , text.length , text)
+        console.log(text.split(" ").filter((a)=> a!=='' ))
         //console.log(wrd , chr , text)
     }
 
@@ -72,7 +72,7 @@ export default function TextBox(props) {
     </div>
     <div className="container my-3" style={{color: props.mode==='dark'?'white':'black'}}>
         <h3>Analysis of text</h3>
-        <p>your text contain {text.length===0?text.length:text.split(" ").length} words and {text.length} characters. </p>
+        <p>your text contain {text.split(" ").filter((a)=> a!=='' ).length} words and {text.length} characters. </p>
     </div>
     </>
   );
